@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound bei Klick</title>
+    <style>
+        /* Stil für den Button */
+        #soundButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #soundButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="soundButton">Spiel Sound ab</button>
+
+    <audio id="audioElement" src="sound.mp3"></audio>
+
+    <script>
+        // JavaScript zum Abspielen des Sounds
+        document.getElementById('soundButton').addEventListener('click', function() {
+            var audio = document.getElementById('audioElement');
+            audio.play();
+        });
+    </script>
+
+</body>
+</html>

@@ -4,19 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bild Button mit Sound</title>
-    <style>
-        /* Stil für das Bild */
-        #imageButton {
-            width: 150px;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        #imageButton.clicked {
-            transform: scale(1.2); /* Bild beim Klick vergrößern */
-        }
-    </style>
+  
 </head>
 <body>
 
@@ -26,22 +16,9 @@
     <!-- Audio Datei -->
     <audio id="audioElement" src="stuff/The Amazing Digital Circus But Its Only Bubble Moments (1) [vocals].mp3"></audio>
 
-    <script>
-        // JavaScript zum Abspielen des Sounds und Vergrößern des Bildes
-        document.getElementById('imageButton').addEventListener('click', function() {
-            var audio = document.getElementById('audioElement');
-            audio.play();
-            
-            // Bild vergrößern
-            this.classList.add('clicked');
 
-            // Optional: Klasse nach einer kurzen Zeit wieder entfernen, um den Effekt rückgängig zu machen
-            setTimeout(() => {
-                this.classList.remove('clicked');
-            }, 300);  // 300 Millisekunden
-        });
-    </script>
 
 </body>
 </html>
+
 

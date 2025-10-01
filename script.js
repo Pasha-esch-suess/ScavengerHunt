@@ -6,8 +6,4 @@
             // Bild vergrößern
             this.classList.add('clicked');
 
-            // Optional: Klasse nach einer kurzen Zeit wieder entfernen, um den Effekt rückgängig zu machen
-            setTimeout(() => {
-                this.classList.remove('clicked');
-            }, 300);  // 300 Millisekunden
-        });
+               });

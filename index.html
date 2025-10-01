@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound bei Klick</title>
+    <title>Bild Button mit Sound</title>
     <style>
-        /* Stil für den Button */
-        #soundButton {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
+        /* Stil für das Bild */
+        #imageButton {
+            width: 150px;
+            height: auto;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: transform 0.3s;
         }
 
-        #soundButton:hover {
-            background-color: #45a049;
+        #imageButton.clicked {
+            transform: scale(1.2); /* Bild beim Klick vergrößern */
         }
     </style>
 </head>
 <body>
 
-    <button id="soundButton">Spiel Sound ab</button>
+    <!-- Bild als Button -->
+    <img id="imageButton" src="stuff/bubble.png" alt="Klick mich" />
 
-    <audio id="audioElement" src="sound.mp3"></audio>
+    <!-- Audio Datei -->
+    <audio id="audioElement" src="The Amazing Digital Circus But Its Only Bubble Moments (1) [vocals].mp3"></audio>
 
     <script>
-        // JavaScript zum Abspielen des Sounds
-        document.getElementById('soundButton').addEventListener('click', function() {
+        // JavaScript zum Abspielen des Sounds und Vergrößern des Bildes
+        document.getElementById('imageButton').addEventListener('click', function() {
             var audio = document.getElementById('audioElement');
             audio.play();
+            
+            // Bild vergrößern
+            this.classList.add('clicked');
+
+            // Optional: Klasse nach einer kurzen Zeit wieder entfernen, um den Effekt rückgängig zu machen
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 300);  // 300 Millisekunden
         });
     </script>
 

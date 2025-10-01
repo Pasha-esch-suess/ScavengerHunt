@@ -8,8 +8,9 @@
             height: auto;
             cursor: pointer;
             transition: transform 0.3s;
-               width:50%;
-               margin:auto;
+                 display: block;
+  margin-left: auto;
+  margin-right: auto;
         }
 
         #imageButton.clicked {

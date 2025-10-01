@@ -9,6 +9,7 @@
             cursor: pointer;
             transition: transform 0.3s;
                 position:center;
+               margin:auto;
         }
 
         #imageButton.clicked {

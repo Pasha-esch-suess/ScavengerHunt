@@ -1,9 +1,9 @@
         /* Stil für das Bild */
-* {
+       * {
         background-color:#99ccff;
-}       
+       }       
 
-#imageButton {
+       #imageButton {
             width: 150px;
             height: auto;
             cursor: pointer;

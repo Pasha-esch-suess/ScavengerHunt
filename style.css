@@ -1,9 +1,14 @@
         /* Stil für das Bild */
-        #imageButton {
+* {
+        background-color:#99ccff;
+}       
+
+#imageButton {
             width: 150px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s;
+                position:center;
         }
 
         #imageButton.clicked {

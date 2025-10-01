@@ -1,0 +1,11 @@
+        /* Stil für das Bild */
+        #imageButton {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #imageButton.clicked {
+            transform: scale(1.2); /* Bild beim Klick vergrößern */
+        }
